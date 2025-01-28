@@ -59,7 +59,9 @@
         .project-item {
             margin: 1.5rem 0;
             padding: 1rem;
-            border-left: 4px solid var(--secondary-color);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         a {
@@ -79,41 +81,83 @@
         <h1>Jovan Cicvarić</h1>
         <div class="contact-info">
     <a href="mailto:jovan.cicvaric@yahoo.com"><i class="fas fa-envelope"></i> jovan.cicvaric@yahoo.com</a>
-    <a href="https://www.linkedin.com/in/jovan-cicvaric/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https:://www.github.com/cile98"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/jovan-cicvaric/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https:://www.github.com/cile98" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </header>
 
-
+    <section class="about-me">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am deeply passionate about machine learning and the incredible advancements happening in the field. My favorite topics are <strong>computer vision</strong> and <strong>dataset distillation</strong>, where I enjoy exploring innovative methods to improve model efficiency and performance.
+    </p>
+    <p>
+        I thrive on solving complex problems and learning new things every day. Through machine learning, I love uncovering insights about the world around us and understanding how humans work, think, and interact.
+    </p>
+    <p>
+        Outside of work, I enjoy cooking and traveling, which inspire me to explore new cultures, flavors, and perspectives. These experiences fuel my creativity and curiosity.
+    </p>
+</section>
 
     <section>
         <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-item">
+            <h3>Optocycle GmbH, Tübingen</h3>
+            <p>02/2024-present | Machine Learning Engineer</p>
+            <ul>
+                <li> Developed classification model for different kinds of construction waste, achieving 90+ accuracy</li>
+                <li> Developed model for estimating object sizes with monocular camera</li>
+                <li> Developed labeling pipeline and supervised labeling of more than 20k image across multiple teams</li>
+                <li> Developed training tracking and model deployment pipeline using MLFlow and Triton</li>
+                <li> Developed model for plastics classification by combining multispectral classification with LLM</li>
+                <li> Conducted studies exploring classification performance in multispectral vs RGB domains</li>
+                <li>Tech stack: Python, Pytorch, NumPy, OpenCV, Docker, Kubernetes, RabbitMQ, CVAT, Triton Inference, MLFlow, Helm, Poetry, Multi/Hyper-spectral Images</li>
+            </ul>
+
+        </div>
         <div class="experience-item">
             <h3>Autonomous Vision Group, Tübingen</h3>
             <p>06/2023–present | Research Engineer</p>
             <p>06/2021–05/2023 | Research Assistant</p>
             <ul>
-                <li>Full Stack Development of scientific paper recommendation system</li>
-                <li>Personalized SVMs and BERT for abstract categorization</li>
-                <li>Registration pipeline for 3.5k+ users</li>
-                <li>Tech stack: Flask, React, SQLite, Python (Pandas, NumPy, Celery)</li>
+                <li> Full stack development of a scientific paper recommendation system <a href="https://scholar-inbox.com/" target="_blank">Scholar Inbox</a> </li>
+                <li> Using personalized models trained on users’ previous votes and selected authors for making recommendations.</li>
+                <li>Developed a registration pipeline that facilitated over 20k+ new users</li>
+                <li>Optimized SQL queries, Python code, and our embedding storage system  for lower latency and memory usage extensively.</li>
+                <li> Creating a dataset of abstract annotations, containing 2425 sub-sentence labels within 691 annotated abstracts.</li>
+
+                <li> Tech stack: Flask, React, HTML/CSS, SQLite, PostgreSQL, Python (Pandas, NumPy, Celery, PyTorch), NLP</li>
             </ul>
         </div>
+        <div class="experience-item">
+            <h3>Moscow Institute of Physics and Technology, Moscow</h3>
+            <p>12/2019-04/2020 | Student Assistant</p>
+            <ul>
+                <li> Assisted in preparatory university courses in Mathematics and Physics for 10th-grade students.</li>
+                <li> Checked homework, gave personal reviews and personalized study guidance.</li>
+            </ul>
+
+
+        </div>
+
     </section>
 
     <section>
         <h2 class="section-title">Education</h2>
         <div class="experience-item">
             <h3>University of Tübingen</h3>
-            <p>M.Sc. Machine Learning (GPA 1.1)</p>
+            <p>M.Sc. Machine Learning </p>
+            <p>GPA 1.1 (best: 1.0), Graduated with distinction</p>
             <p>10/2020 – 05/2023</p>
             <p>Courses: Deep Learning, Computer Vision, Reinforcement Learning, Statistical ML</p>
         </div>
 
         <div class="experience-item">
             <h3>Moscow Institute of Physics and Technology</h3>
-            <p>B.Sc. Applied Mathematics & Physics (Top 5%)</p>
+            <p>B.Sc. Applied Mathematics & Physics</p>
+            <p>GPA 4.66 (best: 5.0)</p>
             <p>09/2016 – 07/2020</p>
+            <p>Courses: Calculus, Informatics, Linear Algebra, Differential Equations, Computational Mathematics, Physics.</p>
         </div>
     </section>
 
@@ -121,22 +165,57 @@
         <h2 class="section-title">Projects & Research</h2>
 
         <div class="project-item">
-            <h3>Generative Dataset Distillation (<a href="assets/Cicvaric2023.pdf" target="_blank">Master Thesis</a>)</h3>
-            <p>2023 | PyTorch, StyleGAN2/XL, ImageNet/CIFAR</p>
-            <p>Merged dataset distillation with generative modeling under Prof. Andreas Geiger</p>
+            <h3> <a href="assets/Cicvaric2023.pdf" target="_blank">Generative Dataset Distillation</a></h3>
+            <p>2023 | Python, PyTorch, Wandb </p>
+            <ul>
+                <li>Master Thesis project done under the supervision of <a href="https://cvlibs.net" target="_blank">Prof. Andreas Geiger</a> and <a href="https://kashyap7x.github.io/" target="_blank">Kashyap Chitta</a> </li>
+                <li>Introduced new approaches that combine dataset distillation and generative modelling</li>
+                <li>Worked with different image datasets, such as ImageNet-1k, CIFAR10/100</li>
+                <li>Used generative dataset distillation for imitation learning on CarRacing env and achieved 80+ of original score with just 1 image per class</li>
+                <li>Worked with different generative models, such as StyleGAN2 and StyleGAN-XL</li>
+                <li>Conducted extensive research of existing distillation methods and compared
+                proposed techniques</li>
+            </ul>
         </div>
 
         <div class="project-item">
             <h3>Crypto News Telegram Bot</h3>
-            <p>2022 | Flask, Twitter/CoinMarket API</p>
-            <p>Implemented bot for aggregating crypto news from multiple sources</p>
+            <p>2022 | Python, Flask, Twitter API, Telegram API, CoinMarket API, PostgreSQL</p>
+            <ul>
+                <li>Implemented and deployed Telegram Bot for receiving crypto news from Twitter,
+Discord and CoinMarket</li>
+                <li>Actively used by 250+ people and providing access to 60+ crypto-related projects.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <h3> <a href="https://github.com/cile98/laser-hockey-1" target="_blank"> Laser-hockey RL </a></h3>
+            <p>2021 | Python, PyTorch, OpenAI Gym, NumPy</p>
+            <ul>
+                <li>Implemented Deep Deterministic Policy Gradient (DDPG) and Twin Delayed DDPG
+(TD3) agents for laser-hockey environment</li>
+                <li>Ranked 3rd place out of 70+ participants in a tournament organized by <a href="https://al.is.mpg.de/" target="_blank">Autonomous Learning Group
+ @ MPI-IS </a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <h3>CarRacing IL & RL</h3>
+            <p>2021 | Python, PyTorch, OpenAI Gym, NumPy</p>
+            <ul>
+                <li>Implemented Deep Q-Network (DQN), Imitation Learning and Modular pipeline with geometric controller for
+CarRacing environment from OpenAI Gym.</li>
+                <li>Placed 3rd overall in the competition with 35+ participants organized by <a href="https://cvlibs.net/" target="_blank">Autonomous Vision Group
+ @ Uni Tuebingen </a>.</li>
+
+            </ul>
+
         </div>
     </section>
 
     <section>
     <h2 class="section-title">Achievements</h2>
     <div class="achievement-item">
-        <h3>ECCV Workshop Best Paper Award</h3>
+        <h3>2024 | ECCV Workshop Best Paper Award</h3>
         <p>
             <i class="fas fa-trophy" style="color: gold;"></i>
             Our approach, <strong>GenDM</strong>, ranked <strong>2nd place</strong> and won the
@@ -144,6 +223,11 @@
             <a href="https://dd-challenge-main.vercel.app/#/" target="_blank">2024 Dataset Distillation Challenge (Generative Track)</a>.
         </p>
     </div>
+        <div>
+            <h3>2018 | 2X Scholarship from the <a href="https://my.phystech-foundation.org/" target="_blank"> Foundation of Developing Innovational Education </a> </h3>
+           <p> <i class="fas fa-medal" style="color: gold;"></i>
+            Received a scholarship twice for being in the top 5% of students.</p>
+        </div>
 </section>
 
     <section class="skills-container">
