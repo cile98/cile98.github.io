@@ -25,7 +25,27 @@
             text-align: center;
             padding: 2rem 0;
             border-bottom: 3px solid var(--secondary-color);
+            }
+
+        .header-content {
+            display: flex; /* Use flexbox for side-by-side layout */
+            justify-content: space-between; /* Push items to the sides */
+            align-items: center; /* Center items vertically */
+            gap: 20px; /* Add space between the text and image */
         }
+
+        .header-text {
+            text-align: left; /* Align text to the left */
+        }
+
+        .header-img {
+            width: 180px; /* Set the width of the image */
+            height: 240px; /* Set the height of the image */
+            border-radius: 0; /* Make the image circular */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for style */
+            flex-shrink: 0; /* Prevent the image from shrinking */
+        }
+
 
         .contact-info {
             display: flex;
@@ -73,17 +93,30 @@
             body {
                 padding: 10px;
             }
+            .header-content {
+                flex-direction: column; /* Stack the image and text vertically */
+                text-align: center; /* Center-align everything */
+            }
+
+            .header-img {
+                margin-top: 20px; /* Add spacing above the image */
+            }
         }
     </style>
 </head>
 <body>
     <header>
+    <div class="header-content">
+        <div class="header-text">
         <h1>Jovan Cicvarić</h1>
         <div class="contact-info">
     <a href="mailto:jovan.cicvaric@yahoo.com"><i class="fas fa-envelope"></i> jovan.cicvaric@yahoo.com</a>
     <a href="https://www.linkedin.com/in/jovan-cicvaric/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https:://www.github.com/cile98" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
+        </div>
+        <img src="/assets/profile.jpeg" alt="Jovan Cicvarić" class="header-img">
+    </div>
     </header>
 
     <section class="about-me">
