@@ -21,30 +21,32 @@
             background-color: var(--light-grey);
         }
 
-        header {
-            text-align: center;
-            padding: 2rem 0;
-            border-bottom: 3px solid var(--secondary-color);
-            }
+       header {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center content */
+    text-align: center;
+    gap: 20px; /* Space between name and image */
+    flex-wrap: wrap; /* Allows elements to stack on smaller screens */
+}
+
 
         .header-content {
             display: flex; /* Use flexbox for side-by-side layout */
-            justify-content: space-between; /* Push items to the sides */
             align-items: center; /* Center items vertically */
-            gap: 20px; /* Add space between the text and image */
+            gap: 200px; /* Add space between the text and image */
         }
 
         .header-text {
-            text-align: left; /* Align text to the left */
+            text-align: center; /* Align text to the left */
         }
 
         .header-img {
             width: 180px; /* Set the width of the image */
             height: 240px; /* Set the height of the image */
-            border-radius: 0; /* Make the image circular */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for style */
-            flex-shrink: 0; /* Prevent the image from shrinking */
-        }
+            object-fit: cover;
+        border-radius: 8px; /* Optional */
+    }
 
 
         .contact-info {
@@ -99,8 +101,11 @@
             }
 
             .header-img {
-                margin-top: 20px; /* Add spacing above the image */
+                display: none;
             }
+            header {
+        flex-direction: column; /* Stack items */
+    }
         }
     </style>
 </head>
